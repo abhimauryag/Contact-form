@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    function showPopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "block";
+      }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/abhithemail+1@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://zaap.bio/theabhi">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit" class="btn" onclick="showPopup()">
+      </div>
+    </form>
+  </div>
+  <div id="popup" class="popup">
+    <h2>Thank You!</h2>
+    <p>Your message has been submitted successfully. <br> Redirecting you to the main-page.....</p>
+  </div>
+</body>
+</html>
